@@ -1,0 +1,9 @@
+{% load static %}
+<nav>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <a href="{% url 'electronic-index' %}">Главная</a>
+    <a href="https://mixupload.com/">Источник</a>
+    {% for style_lst in styles_lst %}
+    <a href="{% url 'electronic-style' style_lst %}">{{style_lst|title}}</a>
+    {% endfor %}
+</nav>

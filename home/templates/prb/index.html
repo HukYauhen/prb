@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css_add %}
+    <link rel="stylesheet" href="{% static 'prb/css/index.css' %}">
+{% endblock %}
+
+{% block title %}
+    Electronic Styles
+{% endblock %}
+
+{% block content %}
+<!--    {% include 'includes/navbar.html' %}-->
+    <h1>Стили электронной музыки</h1>
+    <ul>
+        {% for style_lst in styles_lst %}
+            <li style="color:green"><a href="{% url 'electronic-style' style_lst %}">{{forloop.counter}}. {{style_lst|title}}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

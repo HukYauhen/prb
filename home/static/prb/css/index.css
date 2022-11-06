@@ -1,0 +1,35 @@
+ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    list-style-type: none;
+    width: 90%;
+    max-width: 35rem;
+    border-radius: 20px;
+    margin: 2rem auto;
+    padding: 6px;
+    background-color: #aac9da;
+}
+
+ul li {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 2rem 1rem;
+}
+
+ul a:hover  {
+    color: black;
+}
+
+ul a:active {
+    color:rgb(255, 0, 0)
+}
+
+h1 {
+    color:rgb(230, 194, 17);
+    text-align:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    text-decoration: underline;
+}

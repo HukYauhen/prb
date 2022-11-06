@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'prb/css/info.css' %}">
+{% endblock %}
+
+{% block title %}
+    Style: {{stl|upper}}
+{% endblock %}
+
+{% block content %}
+    {% include 'includes/navbar.html' %}
+    {% if description_style is None %}
+        <h2>Информация о таком стиле электронной музыки - {{stl|upper}} - отсутствует</h2>
+    {% else %}
+        <h1>Electronic style - {{stl|capfirst}}</h1>
+        <h3>{{description_style}}</h3>
+
+    {% endif %}
+    <ul>
+        {% for m in musics %}
+            <li><h3>{{ m.content }}</h3></li>
+        {% endfor %}
+        <hr>
+        <h3>Подстили: </h3>
+        {% for s in sub_music %}
+        <li><h3>{{s.sub_style}}</h3></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
